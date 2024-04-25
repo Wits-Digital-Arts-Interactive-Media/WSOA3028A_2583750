@@ -1,7 +1,7 @@
 const root = "/WSOA3028A_2583750"
 
 const menuItems = [
-    {name: "Home", href: `${root}/index.html`},
+    {name: "Home", href: root + "/index.html"},
     {name: "Blog", href: `${root}/Blogs/index.html`},
     {name: "Essays", href: `${root}/Essays/index.html`},
     {name: "Portfolio", href: `${root}/Portfolio/index.html`},
@@ -30,4 +30,6 @@ export function initialise(currentPage){
         ul.appendChild(li)
     }
     nav.appendChild(ul)
+
+    
 }
