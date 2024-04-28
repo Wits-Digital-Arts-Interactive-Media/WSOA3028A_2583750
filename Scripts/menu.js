@@ -41,6 +41,8 @@ const blogPosts = [
     {name: "Blog 4", href: `${root}/Blogs/blog4.html`},
     {name: "Blog 5", href: `${root}/Blogs/blog5.html`},
     {name: "Blog 6", href:`${root}/Blogs/blog6.html`},
+    {name: "Blog 7", href:`${root}/Blogs/blog7.html`},
+    {name: "Blog 8", href:`${root}/Blogs/blog8.html`},
 ]
 
 export function blogIndexes() {

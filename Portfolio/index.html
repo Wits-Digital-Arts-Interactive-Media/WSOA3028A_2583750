@@ -17,7 +17,9 @@
 <script type="module">
     import { initialise } from "../Scripts/menu.js";
     initialise("Portfolio"); // Call the initialise function with a test argument
+
 </script>
+<script src="../Scripts/slide.js"></script>
 </head>
 <body>
     <header>
@@ -27,5 +29,35 @@
         </nav>
         <hr>
     </header>
+
+    <div class="slider-container">
+      <figure>
+          <img src="../Images/AsteroidStorm.png" height="400" alt="Screenshot of Asteroid Storm" title="Screenshot of Asteroid Storm">
+          <figcaption>Screenshot of Asteroid Storm</figcaption>
+          <div class="slide-description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nisi repellat labore optio dolor. Doloribus, ut. Excepturi ut est facilis quibusdam tempore assumenda cumque ullam mollitia eos. Voluptate, tenetur aspernatur.</p>
+          </div>
+      </figure>
+
+      <figure>
+        <img src="../Images/GardenGrove.png" height="400" alt="Screenshot of Garden Grove" title="Screenshot of Garden Grove">
+        <figcaption>Screenshot of Garden Grove</figcaption>
+        <div class="slide-description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nisi repellat labore optio dolor. Doloribus, ut. Excepturi ut est facilis quibusdam tempore assumenda cumque ullam mollitia eos. Voluptate, tenetur aspernatur.</p>
+        </div>
+    </figure>
+
+    <figure>
+      <img src="../Images/PotatoePanic.png" height="400" alt="Screenshot of PotatoePanic" title="Screenshot of PotatoePanic">
+      <figcaption>Screenshot of PotatoePanic</figcaption>
+      <div class="slide-description">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nisi repellat labore optio dolor. Doloribus, ut. Excepturi ut est facilis quibusdam tempore assumenda cumque ullam mollitia eos. Voluptate, tenetur aspernatur.</p>
+      </div>
+  </figure>
+
+  </div>
+
+  <button class="prev-btn" onclick="prevSlide()">&lt;</button>
+  <button class="next-btn" onclick="nextSlide()">&gt;</button>
 </body>
 </html>
