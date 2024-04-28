@@ -33,3 +33,28 @@ export function initialise(currentPage){
 
     
 }
+
+const blogPosts = [
+    {name: "Blog 1", href: `${root}/Blogs/blog1.html`},
+    {name: "Blog 2", href: `${root}/Blogs/blog2.html`},
+    {name: "Blog 3", href: `${root}/Blogs/blog3.html`},
+    {name: "Blog 4", href: `${root}/Blogs/blog4.html`},
+    {name: "Blog 5", href: `${root}/Blogs/blog5.html`},
+    {name: "Blog 6", href:`${root}/Blogs/blog6.html`},
+]
+
+export function blogIndexes() {
+    const ul = document.createElement("ul");
+    for (let blogIndex of blogPosts) {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.innerText = blogIndex.name;
+        a.setAttribute("href", blogIndex.href);
+        li.appendChild(a);
+        ul.appendChild(li);
+    }
+    document.body.appendChild(ul); // Append to the body of the document
+}
+
+
+

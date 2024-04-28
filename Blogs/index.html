@@ -18,8 +18,26 @@
     import { initialise } from "../Scripts/menu.js";
     initialise("Blogs"); // Call the initialise function with a test argument
 </script>
+
+<script type="module">
+  import { blogIndexes } from "../Scripts/menu.js";
+  blogIndexes();
+</script>
 </head>
+<header>
+  <h1 align="center"><u>Blog Index</u></h1>
+  <nav>
+
+  </nav>
+  <hr>
+</header>
 <body>
-  <!-- Make index page for all blog posts -->
+
+  <ul id="blogList">
+
+  </ul>
+
+  <div id="blogContent"></div>
+
 </body>
 </html>
