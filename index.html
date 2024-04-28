@@ -14,7 +14,11 @@
     <meta property="og:url" content="https://wits-digital-arts-interactive-media.github.io/WSOA3028A_2583750/">
 
   <link rel="icon" type="image/png" href="Images/coffee.png">
-
+  <script type="module" src="./Scripts/menu.js"></script>
+  <script type="module">
+    import { initialise } from "./Scripts/menu.js";
+    initialise("Home"); // Call the initialise function with a test argument
+</script>
   <title>Interactive Media Website</title>
 
   
@@ -28,7 +32,7 @@
   <h1 align="center"> <u>Cameron Morgan's Interactive Media Website</u></h1>
 
   <nav>
-    <ul id="menuContainer"></ul>
+
   </nav>
  </header>
  <hr>
@@ -45,6 +49,6 @@
  </main>
 
 
- <script type="module" src="Scripts/menu.js"></script>
+
 </body>
 </html>
