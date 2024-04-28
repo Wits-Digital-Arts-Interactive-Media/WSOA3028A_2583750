@@ -1,7 +1,7 @@
 // menu.js
 
 document.addEventListener("DOMContentLoaded", function () {
-    const root = "/WSOA3028A_2583750"; // Replace with your root URL if needed
+ const root = "/WSOA3028A_2583750"; // Replace with your root URL if needed
     const menuItems = [
       { name: "Home", href: root + "/index.html" },
       { name: "Blog", href: `${root}/Blogs/index.html` },
