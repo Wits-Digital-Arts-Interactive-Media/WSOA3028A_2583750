@@ -6,7 +6,7 @@ const menuItems = [
     {name: "Essays", href: `${root}/Essays/index.html`},
     {name: "Portfolio", href: `${root}/Portfolio/index.html`},
     {name: "Design", href: `${root}/Design/index.html`},
-    {name: "About", href: `${root}/About/index.html`},
+    {name: "About", href: `${root}/Profile/index.html`},
 ];
 export function initialise(currentPage){
 
