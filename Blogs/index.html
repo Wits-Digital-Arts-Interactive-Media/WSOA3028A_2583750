@@ -19,6 +19,24 @@
     initialise("Blogs"); // Call the initialise function with a test argument
 </script>
 
+<script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Index",
+
+      "author": {
+          "@type": "Person",
+          "name": "Cameron Morgan"
+      },
+      "publisher": {
+          "@type": "University",
+          "name": "University of Witwatersrand"
+      },
+      "description": "Index of Blog Posts"
+  }
+</script>
+
 <script type="module">
   import { blogIndexes } from "../Scripts/menu.js";
   blogIndexes();
