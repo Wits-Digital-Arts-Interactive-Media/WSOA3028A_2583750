@@ -8,19 +8,19 @@ const menuItems = [
     {name: "Design", href: `${root}/Design/index.html`},
     {name: "Profile", href: `${root}/Profile/index.html`},
 ];
-export function initialise(currentPage){
+export function initialise(currentPage){                    //creates nav menu based on array. Param = currentPage
 
     console.log("worked")
-    const nav = document.querySelector("header > nav")
+    const nav = document.querySelector("header > nav")      //selects nav element in header
     const ul = document.createElement("ul")
-    for(let menuItem of menuItems)
+    for(let menuItem of menuItems)                          //iterates over each menu item in menuItems array
     {
-        const li = document.createElement("li")
-        if(currentPage != menuItem.name)
+        const li = document.createElement("li")              //Within each iteration a list element is made for each item
+        if(currentPage != menuItem.name)                     //Condition to check if currentPage name does not match menu item name
         {
-            const a = document.createElement("a")
-            a.innerText = menuItem.name
-            a.setAttribute("href", menuItem.href)
+            const a = document.createElement("a")            // if its true, an anchor element is made for each menu item
+            a.innerText = menuItem.name                     // sets the text content of anchor to the menu item name
+            a.setAttribute("href", menuItem.href)           // sets href attribute to the corresponding url
             li.appendChild(a)
 
         }
@@ -34,7 +34,7 @@ export function initialise(currentPage){
     
 }
 
-const blogPosts = [
+const blogPosts = [                                          //same stuff as above but only for blogs
     {name: "Blog 1", href: `${root}/Blogs/blog1.html`},
     {name: "Blog 2", href: `${root}/Blogs/blog2.html`},
     {name: "Blog 3", href: `${root}/Blogs/blog3.html`},

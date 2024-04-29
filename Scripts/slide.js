@@ -1,23 +1,23 @@
 let slideIndex = 0;
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.slider-container figure');
-    slides.forEach(slide => slide.style.display = 'none'); // Hide all slides
+function showSlide(index) {                                                     //displays slide according to based on provided index
+    const slides = document.querySelectorAll('.slider-container figure');       //selects elements with the class name
+    slides.forEach(slide => slide.style.display = 'none');                      //hides slides by setting display to none
 
     const captions = document.querySelectorAll('.slider-container figcaption');
-    captions.forEach(caption => caption.style.display = 'none'); // Hide all captions
+    captions.forEach(caption => caption.style.display = 'none'); 
 
     const paragraphs = document.querySelectorAll('.slider-container p');
-    paragraphs.forEach(paragraph => paragraph.style.display = 'none'); // Hide all paragraphs
+    paragraphs.forEach(paragraph => paragraph.style.display = 'none'); 
 
-    if (index >= slides.length) {
+    if (index >= slides.length) {                                           // if index is >=total number of slides, slideIndex reset to 0, to loop back to first slide
         slideIndex = 0;
     } else if (index < 0) {
         slideIndex = slides.length - 1;
     }
-    slides[slideIndex].style.display = 'block'; // Show the current slide
-    captions[slideIndex].style.display = 'block'; // Show the current caption
-    paragraphs[slideIndex].style.display = 'block'; // Show the current paragraph
+    slides[slideIndex].style.display = 'block';                             //displays slide by setting display to block
+    captions[slideIndex].style.display = 'block'; 
+    paragraphs[slideIndex].style.display = 'block'; 
 }
 
 function prevSlide() {
@@ -30,6 +30,6 @@ function nextSlide() {
     showSlide(slideIndex);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    showSlide(slideIndex); // Show the first slide when the page loads
+document.addEventListener('DOMContentLoaded', () => {                        //waits for dom content to be fully loaded
+    showSlide(slideIndex); 
 });

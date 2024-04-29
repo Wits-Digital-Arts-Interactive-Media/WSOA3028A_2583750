@@ -8,15 +8,16 @@ const blogLinks = [
     "/WSOA3028A_2583750/Blogs/blog6.html",
     "/WSOA3028A_2583750/Blogs/blog7.html",
     "/WSOA3028A_2583750/Blogs/blog8.html",
-    // Add more links for other blog posts as needed
+  
 ];
 
-const prevButton = document.getElementById("prevButton");
+const prevButton = document.getElementById("prevButton");             //gets buttons by id
 const nextButton = document.getElementById("nextButton");
 
-let currentIndex = blogLinks.indexOf(window.location.pathname); // Get the index of the current blog post in the array
+let currentIndex = blogLinks.indexOf(window.location.pathname);       //initialises current index to index of current blog post in the array. window.location.pathname gets current url path and finds index in blog links. Allows script to know which blog is being viewed
+                                                                    
 
-prevButton.addEventListener("click", () => {
+prevButton.addEventListener("click", () => {                        //sets up event listener for previous button. When button is clicks, function inside is executed
     if (currentIndex > 0) {
         currentIndex--;
         window.location.href = blogLinks[currentIndex];
