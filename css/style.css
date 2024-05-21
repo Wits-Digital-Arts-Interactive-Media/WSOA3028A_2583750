@@ -1,4 +1,7 @@
-
+:root{
+    --ff-recoleta: "Recoleta", serif;
+--ff-gordita: "Gordita", sans-serif;
+}
 
 body{
     background-color: hsl(0, 0%, 7%);
@@ -19,3 +22,64 @@ body.active{overflow: hidden};
 ::-webkit-scrollbar-track{background-color: white;}
 
 ::-webkit-scrollbar-thumb{background-color: hsl(0, 0%, 16%);}
+
+.container{
+    padding-inline: 15px;
+}
+
+.section{
+    padding-block: 60px;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6{
+    font-family: var(--ff-recoleta);
+    line-height: 1.2;
+}
+
+.h1,
+.h2{
+    font-size: 6rem;
+    font-weight: 400;
+}
+
+.hero{
+    padding-block-start: 120px;
+    text-align: center;
+}
+
+.hero-banner{
+    max-width: 150px;
+    margin-inline: auto;
+    margin-block-end: 20px;
+}
+
+.hero .wrapper{
+    position:relative;
+    text-align: left;
+    height:1.2em;
+    margin-block: 10px 25px;
+}
+
+.hero .wrapper .strong{
+    position: absolute;
+    top:0;
+    left:500;
+    transform: translateX(-50%);
+    width:300px;
+    font-weight: inherit;
+}
+
+.hero-text{
+    font-size:1.4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+
+
