@@ -14,6 +14,8 @@
     <meta property="og:url" content="https://wits-digital-arts-interactive-media.github.io/WSOA3028A_2583750/">
 
   <link rel="icon" type="image/png" href="Images/coffee.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylsheet" href="./font/font.css">
   <script type="module">
     import { initialise } from "./Scripts/menu.js";
     initialise("Home"); // Call the initialise function with a test argument
@@ -46,7 +48,7 @@
 </head>
 
 <body>
- <header>
+ <header class="header">
   <h1 align="center"> <u>Cameron Morgan's Interactive Media Website</u></h1>
 
   <nav>
@@ -57,22 +59,46 @@
 <br>
 
  <main>
-  <h3 align="center">Hey There!</h3>
- <p align="center"> Welcome to my website.Here you'll find everything Interactive Media related, including the weekly blog posts, academic essays, portfolio related to web design and game design. 
+  <article>
+
+    <section class="section" id="home">
+      <div class="container">
+
+        <figure>
+          <img id="funCat" src="./Images/FunnyCat.png"
+            height="400"
+            alt="Funny cat face picture"
+            title="Representation of my brain cells"
+            class="banner">
+            
+            <figcaption>Representation of my brain cells</figcaption>
+         </figure>
+      <div class="content">
+
+  <h2 align="center" class="homeTitle">Cameron Morgan</h2>
+
+<div>
+  <strong class="strong" letter-effect>Game Developer</strong>
+  <strong class="strong" letter-effect>Front-End Developer</strong>
+</div>
+
+
+ <p align="center" class="paragraph"> Welcome to my website.Here you'll find everything Interactive Media related, including the weekly blog posts, academic essays, portfolio related to web design and game design. 
   <br>
   In these posts I will be discussing my thoughts on the weekly readings, modules covered in class, concepts web design related and interesting tech stuff I stumble upon.
   <br>
   The website looks quite plain but I hope to improve the aesthetics as I learn more about web design and development, so feel free to stick around!
 
-  <figure>
-    <img id="funCat" src="./Images/FunnyCat.png"
-      height="400"
-      alt="Funny cat face picture"
-      title="Representation of my brain cells">
-      
-      <figcaption>Representation of my brain cells</figcaption>
-   </figure>
+  
  </p>
+
+</div>
+
+
+</div>
+</section>
+
+</article>
  </main>
 
 
