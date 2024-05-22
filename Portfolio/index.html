@@ -8,19 +8,15 @@
 <meta name="robots" content="index,follow">
 <meta name="keywords" content="Web Development, Game Development, Interactive, Blog, Portfolio, Essay, Design">
 <meta property="og:title" content="Cameron Morgan Portfolio Website">
-    <meta property="og:description" content="Welcome to Cameron Morgan's Portfolio Website, here you can find his portfolio of work, including games, websites, blogs, analysis.">
-    
-    <meta property="og:url" content="https://wits-digital-arts-interactive-media.github.io/WSOA3028A_2583750/">
-  <link rel="icon" type="image/png" href="Images/coffee.png">
-    <title>Profile and portfolio</title>
-    <link rel="stylesheet" href="../font/font.css">
-
-    <link rel="stylesheet" href="../css/style.css">
-
+<meta property="og:description" content="Welcome to Cameron Morgan's Portfolio Website, here you can find his portfolio of work, including games, websites, blogs, analysis.">
+<meta property="og:url" content="https://wits-digital-arts-interactive-media.github.io/WSOA3028A_2583750/">
+<link rel="icon" type="image/png" href="Images/coffee.png">
+<title>Profile and portfolio</title>
+<link rel="stylesheet" href="../font/font.css">
+<link rel="stylesheet" href="../css/style.css">
 <script type="module">
     import { initialise } from "../Scripts/menu.js";
-    initialise("Portfolio"); // Call the initialise function with a test argument
-
+    initialise("Portfolio");
 </script>
 <script src="../Scripts/slide.js"></script>
 <script type="application/ld+json">
@@ -28,7 +24,6 @@
       "@context": "https://schema.org",
       "@type": "Web Page",
       "headline": "Portfolio",
-
       "author": {
           "@type": "Person",
           "name": "Cameron Morgan"
@@ -42,42 +37,68 @@
 </script>
 </head>
 <body>
-    <header>
-        <h1 align="center"><u>Profile & Portfolio</u></h1>
-        <nav>
+<header>
+    <h1 align="center"><u>Profile & Portfolio</u></h1>
+    <nav></nav>
+    <hr>
+</header>
 
-        </nav>
-        <hr>
-    </header>
-
-    <div class="slider-container">
-      <figure>
-          <img src="../Images/AsteroidStorm.png" height="400" alt="Screenshot of Asteroid Storm" title="Screenshot of Asteroid Storm">
-          <figcaption>Screenshot of Asteroid Storm</figcaption>
-          <div class="slide-description">
-              <p>Astoroid Storm is a 2-player asteroid shooter game. Each player takes control of their own spaceship and players must work together to defend their own ships and the mother ship from an asteroid storm.</p>
-          </div>
-      </figure>
-
-      <figure>
-        <img src="../Images/GardenGrove.png" height="400" alt="Screenshot of Garden Grove" title="Screenshot of Garden Grove">
-        <figcaption>Screenshot of Garden Grove</figcaption>
-        <div class="slide-description">
-            <p>Garden Grove is a top-down, 2-D game about gardening. The player can plant seedlings and feed cats in the garden, while watching the plants grow and enjoying the sounds of the garden. </p>
+<div class="slider">
+    <div class="list">
+        <div class="item active">
+            <figure>
+                <img src="../Images/AsteroidStorm.png" alt="Screenshot of Asteroid Storm" title="Screenshot of Asteroid Storm">
+                <figcaption>Screenshot of Asteroid Storm</figcaption>
+                <div class="content">
+                    <p>Design</p>
+                    <h2>Slider 01</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi animi ut laboriosam, reiciendis repellendus ex placeat sapiente rerum cupiditate, natus recusandae doloremque dignissimos molestiae officiis sint explicabo a soluta!</p>
+                </div>
+            </figure>
         </div>
-    </figure>
+        <div class="item">
+            <figure>
+                <img src="../Images/GardenGrove.png" alt="Screenshot of Garden Grove" title="Screenshot of Garden Grove">
+                <figcaption>Screenshot of Garden Grove</figcaption>
+                <div class="content">
+                    <p>Design</p>
+                    <h2>Slider 02</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi animi ut laboriosam, reiciendis repellendus ex placeat sapiente rerum cupiditate, natus recusandae doloremque dignissimos molestiae officiis sint explicabo a soluta!</p>
+                </div>
+            </figure>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="../Images/PotatoePanic.png" alt="Screenshot of PotatoePanic" title="Screenshot of PotatoePanic">
+                <figcaption>Screenshot of PotatoePanic</figcaption>
+                <div class="content">
+                    <p>Design</p>
+                    <h2>Slider 03</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi animi ut laboriosam, reiciendis repellendus ex placeat sapiente rerum cupiditate, natus recusandae doloremque dignissimos molestiae officiis sint explicabo a soluta!</p>
+                </div>
+            </figure>
+        </div>
+    </div>
 
-    <figure>
-      <img src="../Images/PotatoePanic.png" height="400" alt="Screenshot of PotatoePanic" title="Screenshot of PotatoePanic">
-      <figcaption>Screenshot of PotatoePanic</figcaption>
-      <div class="slide-description">
-          <p>Potatoe Panic is a match-3 puzzle game. The player must create matches among the potatoe themed objects within a certain amount of moves in order to attain the point target.</p>
-      </div>
-  </figure>
+    <div class="arrows">
+        <button id="prev">&lt;</button>
+        <button id="next">&gt;</button>
+    </div>
 
-  </div>
-
-  <button class="prev-btn" onclick="prevSlide()">&lt;</button>
-  <button class="next-btn" onclick="nextSlide()">&gt;</button>
+    <div class="thumbnail">
+        <div class="item active">
+            <img src="../Images/AsteroidStorm.png" alt="Screenshot of Asteroid Storm" title="Screenshot of Asteroid Storm">
+            <div class="content">Slider 01</div>
+        </div>
+        <div class="item">
+            <img src="../Images/GardenGrove.png" alt="Screenshot of Garden Grove" title="Screenshot of Garden Grove">
+            <div class="content">Slider 02</div>
+        </div>
+        <div class="item">
+            <img src="../Images/PotatoePanic.png" alt="Screenshot of PotatoePanic" title="Screenshot of PotatoePanic">
+            <div class="content">Slider 03</div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

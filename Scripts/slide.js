@@ -1,35 +1,36 @@
-let slideIndex = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    let items = document.querySelectorAll('.slider .list .item');
+    let next = document.getElementById('next');
+    let prev = document.getElementById('prev');
+    let thumbnails = document.querySelectorAll('.thumbnail .item');
 
-function showSlide(index) {                                                     //displays slide according to based on provided index
-    const slides = document.querySelectorAll('.slider-container figure');       //selects elements with the class name
-    slides.forEach(slide => slide.style.display = 'none');                      //hides slides by setting display to none
+    let countItem = items.length;
+    let itemActive = 0;
 
-    const captions = document.querySelectorAll('.slider-container figcaption');
-    captions.forEach(caption => caption.style.display = 'none'); 
+    next.addEventListener('click', () => {
+        itemActive = (itemActive + 1) % countItem;
+        showSlider();
+    });
 
-    const paragraphs = document.querySelectorAll('.slider-container p');
-    paragraphs.forEach(paragraph => paragraph.style.display = 'none'); 
+    prev.addEventListener('click', () => {
+        itemActive = (itemActive - 1 + countItem) % countItem;
+        showSlider();
+    });
 
-    if (index >= slides.length) {                                           // if index is >=total number of slides, slideIndex reset to 0, to loop back to first slide
-        slideIndex = 0;
-    } else if (index < 0) {
-        slideIndex = slides.length - 1;
+    thumbnails.forEach((thumbnail, index) => {
+        thumbnail.addEventListener('click', () => {
+            itemActive = index;
+            showSlider();
+        });
+    });
+
+    function showSlider() {
+        document.querySelector('.slider .list .item.active').classList.remove('active');
+        document.querySelector('.thumbnail .item.active').classList.remove('active');
+
+        items[itemActive].classList.add('active');
+        thumbnails[itemActive].classList.add('active');
     }
-    slides[slideIndex].style.display = 'block';                             //displays slide by setting display to block
-    captions[slideIndex].style.display = 'block'; 
-    paragraphs[slideIndex].style.display = 'block'; 
-}
 
-function prevSlide() {
-    slideIndex--;
-    showSlide(slideIndex);
-}
-
-function nextSlide() {
-    slideIndex++;
-    showSlide(slideIndex);
-}
-
-document.addEventListener('DOMContentLoaded', () => {                        //waits for dom content to be fully loaded
-    showSlide(slideIndex); 
+    showSlider();
 });
