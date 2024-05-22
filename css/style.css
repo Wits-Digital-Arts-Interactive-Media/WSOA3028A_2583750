@@ -1,85 +1,139 @@
-:root{
+:root {
     --ff-recoleta: "Recoleta", serif;
---ff-gordita: "Gordita", sans-serif;
-}
-
-body{
+    --ff-gordita: "Gordita", sans-serif;
+  }
+  
+  body {
     background-color: hsl(0, 0%, 7%);
-    color:white;
+    color: white;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 2.15;
     overflow-x: hidden;
     height: 300vh;
-}
-
-body.active{overflow: hidden};
-
-:focus-visible{outline-offset: 4px;}
-
-::-webkit-scrollbar{width: 5px;};
-
-::-webkit-scrollbar-track{background-color: white;}
-
-::-webkit-scrollbar-thumb{background-color: hsl(0, 0%, 16%);}
-
-.container{
+  }
+  
+  body.active {
+    overflow: hidden;
+  }
+  
+  :focus-visible {
+    outline-offset: 4px;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: white;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(0, 0%, 16%);
+  }
+  
+  .container {
     padding-inline: 15px;
-}
-
-.section{
+  }
+  
+  .section {
     padding-block: 60px;
-}
-
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6{
+  }
+  
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
     font-family: var(--ff-recoleta);
     line-height: 1.2;
-}
-
-.h1,
-.h2{
+  }
+  
+  .h1,
+  .h2 {
     font-size: 6rem;
     font-weight: 400;
-}
-
-.hero{
+  }
+  
+  .hero {
     padding-block-start: 120px;
     text-align: center;
-}
-
-.hero-banner{
+  }
+  
+  .hero-banner {
     max-width: 150px;
     margin-inline: auto;
     margin-block-end: 20px;
-}
-
-.hero .wrapper{
-    position:relative;
-    text-align: left;
-    height:1.2em;
+  }
+  
+  .hero .wrapper {
+    position: relative;
+    text-align: center;
+    height: 1.2em;
     margin-block: 10px 25px;
-}
-
-.hero .wrapper .strong{
+  }
+  
+  .hero .wrapper .strong {
     position: absolute;
-    top:0;
-    left:500;
+    top: 0;
+    left: 50%;
     transform: translateX(-50%);
-    width:300px;
+    width: auto;
     font-weight: inherit;
-}
-
-.hero-text{
-    font-size:1.4rem;
+    display: none;
+  }
+  
+  .hero .strong.active {
+    display: inline-block;
+  }
+  
+  .hero-text {
+    font-size: 1.4rem;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 5px;
-}
-
-
-
+  }
+  
+  .hero .wrapper .space {
+    padding: 0.1em;
+  }
+  
+  .hero.wrapper :is(.in, .out) {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  
+  .hero.strong.active .out {
+    opacity: 1;
+    transform: scaleY(1);
+    animation: textWaveOut 0.5s ease forwards;
+  }
+  
+  .hero .wrapper .in {
+    animation: textWaveIn 0.5s ease forwards;
+  }
+  
+  @keyframes textWaveIn {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes textWaveOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+  
