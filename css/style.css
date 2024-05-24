@@ -380,3 +380,8 @@ nav ul li.current-page a {
     position: absolute;
     inset: auto 10px 10px 10px;
 }
+
+#myEssay1{
+    width: 100%;
+    height:600px;
+}
