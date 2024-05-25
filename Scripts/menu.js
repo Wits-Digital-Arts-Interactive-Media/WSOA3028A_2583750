@@ -36,13 +36,13 @@ export function initialise(currentPage){                    //creates nav menu b
 
 const blogPosts = [
     {name: "Blog 1", href: `${root}/Blogs/blog1.html`, thumbnail: `${root}/Images/AliAbdaal.png`},
-    {name: "Blog 2", href: `${root}/Blogs/blog2.html`, thumbnail: `${root}/Images/blog2.png`},
-    {name: "Blog 3", href: `${root}/Blogs/blog3.html`, thumbnail: `${root}/Images/blog3.png`},
-    {name: "Blog 4", href: `${root}/Blogs/blog4.html`, thumbnail: `${root}/Images/blog4.png`},
-    {name: "Blog 5", href: `${root}/Blogs/blog5.html`, thumbnail: `${root}/Images/blog5.png`},
-    {name: "Blog 6", href: `${root}/Blogs/blog6.html`, thumbnail: `${root}/Images/blog6.png`},
-    {name: "Blog 7", href: `${root}/Blogs/blog7.html`, thumbnail: `${root}/Images/blog7.png`},
-    {name: "Blog 8", href: `${root}/Blogs/blog8.html`, thumbnail: `${root}/Images/blog8.png`}
+    {name: "Blog 2", href: `${root}/Blogs/blog2.html`, thumbnail: `${root}/Images/coffee.png`},
+    {name: "Blog 3", href: `${root}/Blogs/blog3.html`, thumbnail: `${root}/Images/FunnyCat.png`},
+    {name: "Blog 4", href: `${root}/Blogs/blog4.html`, thumbnail: `${root}/Images/AsteroidStorm.png`},
+    {name: "Blog 5", href: `${root}/Blogs/blog5.html`, thumbnail: `${root}/Images/GardenGrove.png`},
+    {name: "Blog 6", href: `${root}/Blogs/blog6.html`, thumbnail: `${root}/Images/PotatoePanic.png`},
+    {name: "Blog 7", href: `${root}/Blogs/blog7.html`, thumbnail: `${root}/Images/Diagram.png`},
+    {name: "Blog 8", href: `${root}/Blogs/blog8.html`, thumbnail: `${root}/Images/Wireframe1.png`}
 ];
 
 export function blogIndexes() {
