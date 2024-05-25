@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Cameron Morgan">
@@ -20,6 +18,7 @@
         import { initialise } from "../Scripts/menu.js";
         initialise("Design"); // Call the initialise function with a test argument
     </script>
+    <script src="../Scripts/slide.js"></script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -36,30 +35,59 @@
         "description": "Wireframe page includes the wireframes and map planning for the website"
     }
     </script>
-    </head>
-    <body>
-        <a id="top"></a>
-        <header>
-            <h1 align="center"><u>Wireframe</u></h1>
-            <nav>
-            </nav>
-            <hr>
-        </header>
-    
-        <div class="card-container">
-            <div class="card">
-                <img src="../Images/UpdatedPortfolioWireframe.png" alt="Updated Portfolio Wireframe" class="card-image">
-                <div class="card-content">
-                    <p>This is an updated wireframe for the portfolio page of the website. This section of the portfolio showcases the games previously made and is a screenshot of the gameplay. I may decide at a later point to make the screenshot into a hyperlink that takes the user to the itch.io page, where they can play it. Each game will have their own screenshot but only one will be on the page and the user can navigate through each game using the arrow sliders.</p>
+</head>
+<body>
+    <a id="top"></a>
+    <header>
+        <h1 align="center"><u>Wireframe</u></h1>
+        <nav></nav>
+        <hr>
+    </header>
+
+    <div class="carousel-container">
+        <button class="carousel-button prev-button">&lt;</button>
+        <div class="carousel">
+            <div class="card-container">
+                <div class="card">
+                    <img src="../Images/HomePageWireFrame.png" alt="Updated Portfolio Wireframe" class="card-image">
+                    <div class="card-content">
+                        <p>This wireframe depicts the planning for the home page. In it we can see the main heading for the website, followed by a navigation tab that will allow the users to view each section of the website. On the homepage, there will be a small introductory paragraph so that users will know what to expect. At a later point, previews of my portfolio works will be added to entice users to want to see the portfolio, they will also be hyperlinks to give them fast access to each work</p>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="../Images/UpdatedEssayWireFrame.png" alt="Updated Essay Wireframe" class="card-image">
-                <div class="card-content">
-                    <p>This is an updated wireframe for the essay page. There are two methods I could choose to do. Either place both essays under toggle lists and have them both in one document or each essay will have their own document. I am leaning more towards the latter as it would be more efficient and flexible. Once CSS is allowed, I will experiment with using dropdown menus for my essays and blogs.</p>
+                <div class="card">
+                    <img src="../Images/About & Essay Page WireFrame.png" alt="Updated Essay Wireframe" class="card-image">
+                    <div class="card-content">
+                        <p>This is an updated wireframe for the essay page. There are two methods I could choose to do. Either place both essays under toggle lists and have them both in one document or each essay will have their own document. I am leaning more towards the latter as it would be more efficient and flexible. Once CSS is allowed, I will experiment with using dropdown menus for my essays and blogs.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../Images/Wireframe2.png" alt="Updated Essay Wireframe" class="card-image">
+                    <div class="card-content">
+                        <p>This is an updated wireframe for the essay page. There are two methods I could choose to do. Either place both essays under toggle lists and have them both in one document or each essay will have their own document. I am leaning more towards the latter as it would be more efficient and flexible. Once CSS is allowed, I will experiment with using dropdown menus for my essays and blogs.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../Images/Portfolio+DesignWireFrame.png" alt="Updated Essay Wireframe" class="card-image">
+                    <div class="card-content">
+                        <p>This is an updated wireframe for the essay page. There are two methods I could choose to do. Either place both essays under toggle lists and have them both in one document or each essay will have their own document. I am leaning more towards the latter as it would be more efficient and flexible. Once CSS is allowed, I will experiment with using dropdown menus for my essays and blogs.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../Images/UpdatedPortfolioWireframe.png" alt="Updated Essay Wireframe" class="card-image">
+                    <div class="card-content">
+                        <p>This is an updated wireframe for the essay page. There are two methods I could choose to do. Either place both essays under toggle lists and have them both in one document or each essay will have their own document. I am leaning more towards the latter as it would be more efficient and flexible. Once CSS is allowed, I will experiment with using dropdown menus for my essays and blogs.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../Images/UpdatedEssayWireFrame.png" alt="Updated Essay Wireframe" class="card-image">
+                    <div class="card-content">
+                        <p>This is an updated wireframe for the essay page. There are two methods I could choose to do. Either place both essays under toggle lists and have them both in one document or each essay will have their own document. I am leaning more towards the latter as it would be more efficient and flexible. Once CSS is allowed, I will experiment with using dropdown menus for my essays and blogs.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
-    
+        <button class="carousel-button next-button">&gt;</button>
+    </div>
+
+</body>
 </html>
