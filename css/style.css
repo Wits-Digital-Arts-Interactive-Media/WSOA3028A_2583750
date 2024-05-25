@@ -7,6 +7,8 @@ body {
     background-color: hsl(0, 0%, 7%);
     color: white;
     font-size: 1.6rem;
+    font-family: "Gordita", sans-serif;
+
     font-weight: 400;
     line-height: 2.15;
     overflow-x: hidden;
@@ -445,4 +447,71 @@ nav ul li.current-page a {
   font-family: var(--ff-gordita);
   font-size: var(--fs-10);
   line-height: 1.6;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px; /* section-padding */
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    background: hsl(0, 0%, 20%); /* jet-1 (grey) */
+    color: hsl(0, 0%, 100%); /* white */
+    font-size: 2rem; /* fs-7 */
+    font-weight: 500; /* fw-500 */
+    border-radius: 5px; /* radius-5 */
+    box-shadow: 0 12px 30px -10px hsla(0, 0%, 14%, 0.1); /* shadow */
+    text-decoration: none;
+    transition: transform 0.5s ease, background 0.5s ease; /* transition-2 */
+}
+
+.box:hover {
+    transform: scale(1.1);
+    background: linear-gradient(180deg, transparent, hsl(0, 0%, 7%)); /* gradient-1 */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px 15px; /* Adjust the padding as needed */
+}
+
+.card {
+    background-color: hsl(0, 0%, 20%); /* jet-1 (grey) */
+    border-radius: 5px; /* radius-5 */
+    box-shadow: 0 12px 30px -10px hsla(0, 0%, 14%, 0.1); /* shadow */
+    overflow: hidden;
+    transition: transform 0.5s ease, background 0.5s ease;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid hsl(0, 0%, 16%); /* jet-2 (slightly darker grey) */
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content p {
+    font-family: "Gordita", sans-serif;
+    font-size: 1.4rem; /* fs-10 */
+    line-height: 1.6;
 }
