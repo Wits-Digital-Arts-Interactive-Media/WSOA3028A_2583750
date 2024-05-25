@@ -95,7 +95,13 @@ nav ul li.current-page a {
 
 .section {
     padding-block: 60px;
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners */
+    margin: 100px auto; /* Center the section */
+    width: 80%;
 }
+
+
 
 .h1,
 .h2,

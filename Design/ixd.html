@@ -1,49 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="Cameron Morgan">
-<meta name="description" content="This is the design section of Cameron Morgan's Interactive Media Website">
-<meta name="robots" content="index,follow">
-<meta name="keywords" content="Web Development, Game Development, Interactive, Blog, Portfolio, Essay, Design">
-<meta property="og:title" content="Cameron Morgan Portfolio Website">
-<meta property="og:description" content="Welcome to Cameron Morgan's Portfolio Website, here you can find his portfolio of work, including games, websites, blogs, analysis.">
-<meta property="og:url" content="https://wits-digital-arts-interactive-media.github.io/WSOA3028A_2583750/">
-<link rel="icon" type="image/png" href="../Images/coffee.png">
-<title>Design Index</title>
-<link rel="stylesheet" href="../font/font.css">
-<link rel="stylesheet" href="../css/style.css">
-<script type="module">
-    import { initialise } from "../Scripts/menu.js";
-    initialise("Design"); // Call the initialise function with a test argument
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Web Page",
-    "headline": "WireFrame",
-    "author": {
-        "@type": "Person",
-        "name": "Cameron Morgan"
-    },
-    "publisher": {
-        "@type": "University",
-        "name": "University of Witwatersrand"
-    },
-    "description": "Wireframe page includes the wireframes and map planning for the website"
-}
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cameron Morgan">
+    <meta name="description" content="This is the design section of Cameron Morgan's Interactive Media Website">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="Web Development, Game Development, Interactive, Blog, Portfolio, Essay, Design">
+    <meta property="og:title" content="Cameron Morgan Portfolio Website">
+    <meta property="og:description" content="Welcome to Cameron Morgan's Portfolio Website, here you can find his portfolio of work, including games, websites, blogs, analysis.">
+    <meta property="og:url" content="https://wits-digital-arts-interactive-media.github.io/WSOA3028A_2583750/">
+    <link rel="icon" type="image/png" href="../Images/coffee.png">
+    <title>IXD Page</title>
+    <link rel="stylesheet" href="../font/font.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module">
+        import { initialise } from "../Scripts/menu.js";
+        initialise("Design"); // Call the initialise function with a test argument
+    </script>
+        <script src="../Scripts/slide.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Web Page",
+        "headline": "IXD",
+        "author": {
+            "@type": "Person",
+            "name": "Cameron Morgan"
+        },
+        "publisher": {
+            "@type": "University",
+            "name": "University of Witwatersrand"
+        },
+        "description": "IXD page includes the interaction design mappings and plans for the website"
+    }
+    </script>
 </head>
 <body>
-<a id="top"></a>
-<header>
-    <h1 align="center"><u>IxD</u></h1>
-    <nav>
-    </nav>
-    <hr>
-</header>
+    <a id="top"></a>
+    <header>
+        <h1 align="center"><u>IXD</u></h1>
+        <nav></nav>
+        <hr>
+    </header>
 
-    
+    <div class="carousel-container">
+        <button class="carousel-button prev-button">&lt;</button>
+        <div class="carousel">
+            <div class="card-container">
+                <div class="card">
+                    <img src="../Images/InformationMapOut.png" height="400" width="400" title="HomePage mapping" class="card-image">
+                    <div class="card-content">
+                        <p>The mapping is done on the wireframes and displays the chronological order in which users view the webpage. In this map, it displays the left-right bias, which is a cognitive effect where people tend to process information and scan visual elements from left to right. For user interface we focus on placing important information towards the left of the screen, however positional memory also plays a key role as the user is likely to remember according to placement, as headings that are either first or last are remembered more.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../Images/InformationMapOut2.png" height="400" width="400" title="Portfolio and Design Page Mapping" class="card-image">
+                    <div class="card-content">
+                        <p>This map follows the portfolio screen. The portfolio will be one of the most important aspects of the website and because of this there will be less "flavour text" on this section. Each game or website will have it's own dedicated space ont the page, where it will be displayed in a card format with a description beneath it.The works I am most proud about will be on the front as those are what I would like to headline and be the primary focus.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../Images/InformationMapOut3.png" height="400" width="400" title="Blog Post Mapping" class="card-image">
+                    <div class="card-content">
+                        <p>The blog posts are an important aspect of the website, however each blog post will not have as much focus given to it such as the portfolio. The blog posts will be a mix between academic formal and informal writing. It will be mostly text-based. Each heading for each blog post will stand out to the user and a contents page that allows the user to jump to each blog post could be a better way for the user to navigate, instead of placing each blog post in its separate document, which can cause the directory structure to become messy in the future, depending on how many blog post entries we will have.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../Images/UserPath.png" height="400" width="400" title="Mapping Overview of Website" class="card-image">
+                    <div class="card-content">
+                        <p>This is a very simplified mapping of the overview and structure of the website. It displays all the possible locations for the player and how each section can be navigated to and from the home page, depicting it as a central system revolving around the home page. I will flesh it out more to provide more detail.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../Images/Diagram.png" height="400" width="400" title="Mapping Diagram of Website" class="card-image">
+                    <div class="card-content">
+                        <p>Here we can see the layout of the website in a more concise diagram. It displays each section of the website and the contents of each and how they link to each other. All sections will have the same navigation bar to have uniformity and they will each link to each other. Certain sections will display more than others for the time being, until the Essay and Portfolio section is filled</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-button next-button">&gt;</button>
+    </div>
+
+    <section>
+        <h3>Goal Alignment</h3>
+        <p>The goal of the website is to showcase my portfolio of projects to potential collaborators and employers, whilst learning the fundamentals of web development. Users should be able to navigate the website with ease and view what they want with no difficulty. Users should be able to view my portfolio and profile, academic essays, UI design capabilities, and blog posts about various topics regarding technology and development.</p>
+
+        <h3>Style Guide and Research</h3>
+        <dl>
+            <dt><b><u>Hicks Law:</u></b></dt>
+            <dd>Hicks Law states that the time it takes for a user to make a choice increases with the number and complexity of choices available to them. Adhering to this law, I wanted the interface for my website to have minimal choices involved. Fewer options allows for simple and quick navigation.</dd>
+
+            <dt><b><u>Positional Memory:</u></b></dt>
+            <dd>Chances are users have already visited hundreds, maybe thousands of websites before and therefore there are certain conventions that most websites adhere to. Example: the navigational bar will be near the top of the homepage so that users can decide where on the site they would like to visit.</dd>
+        </dl>
+    </section>
+
 </body>
 </html>
