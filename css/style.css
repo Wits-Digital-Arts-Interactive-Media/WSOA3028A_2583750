@@ -617,16 +617,42 @@ dl {
     right: 0;
 }
 
-#prevButton, #nextButton{
-    width: 150px; /* Adjust the width as needed */
-    height: 75px;  /* Adjust the height as needed */
-}
 
-footer {
+
+.button-container {
     display: flex;
     justify-content: space-between;
-    padding: 20px; /* Add some padding to avoid buttons touching the edges */
-    width: 100%;
-    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+    padding: 0 20px; /* Add some padding if needed */
+  }
+  
+  #prevButton, #nextButton {
+    width: 150px; /* Adjust the width as needed */
+    height: 75px;  /* Adjust the height as needed */
+  }
+
+.footer {
+    background-color: hsl(0, 0%, 16%);
+    color: var(--white);
+    padding: var(--section-padding) 0;
+}
+
+.footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.footer .icons-info {
+    font-size: var(--fs-9);
 }
 
