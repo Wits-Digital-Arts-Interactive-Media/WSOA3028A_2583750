@@ -86,3 +86,6 @@ const letterBoxes = document.querySelectorAll("[data-letter-effect]");
         observer.observe(section);
       });
     });
+
+
+    

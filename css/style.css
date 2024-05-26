@@ -23,10 +23,34 @@ body.active {
 .header {
     background-color: hsl(0, 0%, 16%);
     padding: 10px 20px;
+    position: relative;
+    text-align: center; /* Center-align the heading */
 }
 
 .header h1 {
-    margin-bottom: 10px;
+    font-size: 2.5rem; /* Adjust font size as needed */
+    margin: 0;
+    padding: 10px 0; /* Adjust padding to create space around the heading */
+    position: relative;
+    display: inline-block; /* Ensure it works with the pseudo-element */
+}
+
+#squiggle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 20px;
+}
+
+@keyframes drawSquiggle {
+    from {
+        stroke-dasharray: 0 100;
+    }
+    to {
+        stroke-dasharray: 100 0;
+    }
 }
 
 article {
