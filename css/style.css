@@ -50,7 +50,8 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    position: relative;
+    display: inline-block;
 }
 
 nav ul li a,
@@ -78,6 +79,44 @@ nav ul li.current-page {
 nav ul li.current-page a {
     color: hsl(0, 0%, 90%);
     cursor: default;
+}
+
+/* Dropdown menu styling */
+nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: hsl(0, 0%, 15%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+    z-index: 1;
+}
+
+nav ul li ul.dropdown li {
+    width: 100%;
+}
+
+nav ul li ul.dropdown li a {
+    padding: 10px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li ul.dropdown li a:hover,
+nav ul li ul.dropdown li a:focus {
+    background-color: hsl(0, 0%, 25%);
+    color: hsl(0, 0%, 90%);
+}
+
+nav ul li:hover ul.dropdown,
+nav ul li:focus-within ul.dropdown {
+    display: block;
 }
 
 :focus-visible {
@@ -415,65 +454,68 @@ dl {
 }
 
 .section.about {
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.2); /* Lighter grey shade with opacity */
-  padding: 60px 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2); /* Lighter grey shade with opacity */
+    padding: 60px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .section.about::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 40%, transparent);
-  pointer-events: none; /* Ensures the overlay doesn't interfere with content interaction */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 40%, transparent);
+    pointer-events: none; /* Ensures the overlay doesn't interfere with content interaction */
 }
 
 .section.about.active {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .about-container {
-  display: flex;
-  align-items: center;
-  max-width: 1200px;
-  width: 100%;
-  position: relative;
-  z-index: 1; /* Ensures the content is above the overlay */
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    z-index: 1; /* Ensures the content is above the overlay */
+    margin-bottom: 30px; /* Add some space between sections */
 }
 
 .about-image {
-  width: 40%;
-  max-width: 400px;
-  height: auto;
-  border-radius: var(--radius-5);
-  margin-right: 20px;
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    border-radius: var(--radius-5);
+    margin-right: 20px;
 }
 
 .about-content {
-  width: 60%;
+    width: 60%;
 }
 
 .about-title {
-  font-family: var(--ff-recoleta);
-  font-size: var(--fs-3);
-  margin-bottom: 20px;
+    font-family: var(--ff-recoleta);
+    font-size: var(--fs-3);
+    margin-bottom: 20px;
 }
 
-.about-content p {
-  font-family: var(--ff-gordita);
-  font-size: var(--fs-10);
-  line-height: 1.6;
+.about-content p,
+.about-content ul {
+    font-family: var(--ff-gordita);
+    font-size: var(--fs-10);
+    line-height: 1.6;
 }
+
 
 .box-container {
     display: flex;
@@ -568,8 +610,23 @@ dl {
 
 .prev-button {
     left: 0;
+    
 }
 
 .next-button {
     right: 0;
 }
+
+#prevButton, #nextButton{
+    width: 150px; /* Adjust the width as needed */
+    height: 75px;  /* Adjust the height as needed */
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px; /* Add some padding to avoid buttons touching the edges */
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+}
+

@@ -68,19 +68,21 @@ const letterBoxes = document.querySelectorAll("[data-letter-effect]");
     window.addEventListener("load", initializeLetterEffect);
 
     document.addEventListener("DOMContentLoaded", function() {
-      const aboutSection = document.querySelector(".section.about");
+      const aboutSections = document.querySelectorAll(".section.about");
     
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            aboutSection.classList.add("active");
+            entry.target.classList.add("active");
           } else {
-            aboutSection.classList.remove("active");
+            entry.target.classList.remove("active");
           }
         });
       }, {
         threshold: 0.1
       });
     
-      observer.observe(aboutSection);
+      aboutSections.forEach(section => {
+        observer.observe(section);
+      });
     });
