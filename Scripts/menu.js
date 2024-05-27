@@ -54,7 +54,10 @@ const blogPosts = [
     {name: "Blog 5", href: `${root}/Blogs/blog5.html`, thumbnail: `${root}/Images/funnycat5.png`},
     {name: "Blog 6", href: `${root}/Blogs/blog6.html`, thumbnail: `${root}/Images/funnycat6.png`},
     {name: "Blog 7", href: `${root}/Blogs/blog7.html`, thumbnail: `${root}/Images/funnycat7.png`},
-    {name: "Blog 8", href: `${root}/Blogs/blog8.html`, thumbnail: `${root}/Images/funnycat8.png`}
+    {name: "Blog 8", href: `${root}/Blogs/blog8.html`, thumbnail: `${root}/Images/funnycat8.png`},
+    {name: "Blog 9", href: `${root}/Blogs/blog9.html`, thumbnail: `${root}/Images/funnycat9.png`},
+    {name: "Blog 10", href: `${root}/Blogs/blog10.html`, thumbnail: `${root}/Images/funnycat10.png`},
+    {name: "Blog 11", href: `${root}/Blogs/blog11.html`, thumbnail: `${root}/Images/funnycat11.png`}
 ];
 
 export function blogIndexes() {

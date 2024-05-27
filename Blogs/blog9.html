@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Cameron Morgan">
+       <meta name="description" content="This is the blog section of Cameron Morgan's Interactive Media Website">
+       <meta name="robots" content="index,follow">
+      <meta name="keywords" content="Web Development, Game Development, Interactive, Blog, Portfolio, Essay, Design">
+      <meta property="og:title" content="Cameron Morgan Portfolio Website">
+      <meta property="og:description" content="Welcome to Cameron Morgan's Portfolio Website, here you can find his portfolio of work, including games, websites, blogs, analysis.">
+      
+      <meta property="og:url" content="https://wits-digital-arts-interactive-media.github.io/WSOA3028A_2583750/">
+    <link rel="icon" type="image/png" href="Images/coffee.png">
+      <title>Week 10 Blog Post</title>
+      <link rel="stylesheet" href="../font/font.css">
+
+      <link rel="stylesheet" href="../css/style.css">
+
+      <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Christoph Lutz : Digital Inequalities in the Age of Artificial Intelligence and Big data",
+
+            "author": {
+                "@type": "Person",
+                "name": "Cameron Morgan"
+            },
+            "publisher": {
+                "@type": "University",
+                "name": "University of Witwatersrand"
+            },
+            "description": "Reflection and analysis on Digital Inequalities in the Age of Artificial Intelligence and Big Data by Christoph Lutz"
+        }
+    </script>
+  
+
+  <script type="module">
+      import { initialise } from "../Scripts/menu.js";
+      initialise("Blogs"); // Call the initialise function with a test argument
+  </script>
+  <script src="../Scripts/blog-nav.js" type="module"></script>
+
+</head>
+<body>
+<header>
+    <h1 align="center"> <u> Week 11 Blog Post</u></h1>
+    <nav>
+      
+    </nav>
+</header>
+    <hr>
+
+    <main>
+        <article>
+            <h3><u>Incorporating JavaScript</u></h3>
+            <p>
+                My navigation was initially comprised of html markup that used hyperlinks to send the user to the chosen page. The navigation system is now entirely javascript. The menu is generated based on an array containing the various pages of my website. The script selects the “nav” portion of my index.html script within my header and automatically generates the menu within the nav. I used a similar method to create an index for all the blog posts on my website, allowing the user to navigate to each blog post 
+At the end of each blog post in the footer section of the document there are two buttons: previous and next. This allows the user to navigate to the blog post immediately before or after the current blog post. The content of the blog posts can be long and require the user to scroll far enough down, until they cannot see the main navigation menu, therefore having buttons to assist traversing blog posts helps with user experience. 
+On my home page, there is a small animation of a meme cat faced that uses javascript to get the transform of the image and rotate it, adding for some comedic effect. My portfolio page displays my previous works such as games and in the future I may choose to include some javascript practice programs. Currently, it only contains games and each game has its own slide with a description of the game. In the footer there are buttons that display to the user forward and backward. Allowing the user to navigate through all the games made.
+
+            </p>
+            <br>
+            <h3><u>Streamlining Design</u></h3>
+            <p>
+                The javascript additions makes the website more functional and efficient. For example, I could have added my portfolio similarly to how the design section was completed or the blog posts but having the user scroll all the way down and then all the way up again is not feasible and comfortable, therefore adding buttons to navigate around assists on improving the user experience. 
+            </p>
+            
+        </article>
+        <div class="button-container">
+            <button id="prevButton" class="box">Previous</button>
+            <button id="nextButton" class="box">Next</button>
+          </div>
+      <hr>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>
+        Created by Cameron Morgan &copy; <span class="current-year"></span> |
+        <a href="https://github.com/cameronsmorgan" target="_blank" rel="noopener noreferrer">
+            <img src="../Images/GithubIcon.png" alt="GitHub">
+        </a>
+        <a href="https://cameronmorgan-7.itch.io/" target="_blank" rel="noopener noreferrer">
+            <img src="../Images/ItchIcon.png" alt="itch.io">
+        </a>
+    </div>
+    <div class="icons-info">
+        Icons from <a href="https://www.iconfinder.com/" target="_blank" rel="noopener noreferrer">Iconfinder</a>
+    </div>
+</div>
+
+    
+  </footer>
+
+</body>
+</html>

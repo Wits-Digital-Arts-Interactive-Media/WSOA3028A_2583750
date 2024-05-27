@@ -35,14 +35,7 @@ body.active {
     display: inline-block; /* Ensure it works with the pseudo-element */
 }
 
-#squiggle {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 100%;
-    height: 20px;
-}
+
 
 @keyframes drawSquiggle {
     from {
@@ -202,36 +195,35 @@ dl {
     font-weight: 400;
 }
 
-.hero {
-    padding-block-start: 120px;
-    text-align: center;
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
 }
 
-.hero-banner {
-    max-width: 150px;
-    margin-inline: auto;
-    margin-block-end: 20px;
+.hero-title {
+    margin-bottom: 10px; /* Add some space below the title */
 }
 
 .hero .wrapper {
     position: relative;
-    text-align: center;
-    height: 1.2em;
-    margin-block: 10px 25px;
+    text-align: left; /* Align text within the wrapper to the left */
+    margin-block: 10px 25px; /* Adjust margin as needed */
 }
 
 .hero .wrapper .strong {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative; /* Change position to relative */
+    top: 0; /* Remove top value */
+    left: 0; /* Remove left value */
+    transform: none; /* Remove transform */
     width: auto;
     font-weight: inherit;
-    display: none;
+    display: none; /* Hide all strong tags initially */
+    margin-top: 5px; /* Add margin top to separate strong tags from h1 */
 }
 
 .hero .strong.active {
-    display: inline-block;
+    display: inline-block; /* Only display the active strong tag */
 }
 
 .hero-text {
@@ -239,6 +231,7 @@ dl {
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 5px;
+    margin-top: -10px; /* Adjust the margin to move the text higher */
 }
 
 .hero .wrapper .space {
@@ -281,6 +274,8 @@ dl {
         transform: translateY(-100%);
     }
 }
+
+
 
 #blogList {
     display: flex;

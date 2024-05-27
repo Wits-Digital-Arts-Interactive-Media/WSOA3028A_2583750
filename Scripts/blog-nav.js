@@ -8,6 +8,9 @@ const blogLinks = [
     "/WSOA3028A_2583750/Blogs/blog6.html",
     "/WSOA3028A_2583750/Blogs/blog7.html",
     "/WSOA3028A_2583750/Blogs/blog8.html",
+    "/WSOA3028A_2583750/Blogs/blog9.html",
+    "/WSOA3028A_2583750/Blogs/blog10.html",
+    "/WSOA3028A_2583750/Blogs/blog11.html",
   
 ];
 
