@@ -37,15 +37,6 @@ body.active {
 
 
 
-@keyframes drawSquiggle {
-    from {
-        stroke-dasharray: 0 100;
-    }
-    to {
-        stroke-dasharray: 100 0;
-    }
-}
-
 article {
     padding: 20px;
     margin: 20px 0;
@@ -110,7 +101,7 @@ nav ul li ul.dropdown {
     padding: 0;
     margin: 0;
     min-width: 200px;
-    z-index: 1;
+    z-index: 1000; /* Adjust the z-index value as needed */
 }
 
 nav ul li ul.dropdown li {
@@ -292,10 +283,11 @@ dl {
     overflow: hidden;
     width: 250px;
     transition: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+    transform: scale(1);
 }
 
 .blog-card:hover {
-    transform: translateY(-10px);
+    transform: scale(1.05); /* Increase the scale on hover */
 }
 
 .blog-thumbnail {
@@ -319,7 +311,7 @@ dl {
 
 .blog-caption a:hover,
 .blog-caption a:focus {
-    color: hsl(346, 100%, 58%);
+    color:white;
 }
 
 .slider {
@@ -514,7 +506,7 @@ dl {
     width: 40%;
     max-width: 400px;
     height: auto;
-    border-radius: var(--radius-5);
+    border-radius: 5px;
     margin-right: 20px;
 }
 
@@ -524,14 +516,14 @@ dl {
 
 .about-title {
     font-family: var(--ff-recoleta);
-    font-size: var(--fs-3);
+    font-size: 3.8rem;
     margin-bottom: 20px;
 }
 
 .about-content p,
 .about-content ul {
     font-family: var(--ff-gordita);
-    font-size: var(--fs-10);
+    font-size: 1.4rem;
     line-height: 1.6;
 }
 
@@ -651,8 +643,8 @@ dl {
 
 .footer {
     background-color: hsl(0, 0%, 16%);
-    color: var(--white);
-    padding: var(--section-padding) 0;
+    color: white;
+    padding: 60px 0;
 }
 
 .footer .container {
@@ -672,6 +664,6 @@ dl {
 }
 
 .footer .icons-info {
-    font-size: var(--fs-9);
+    font-size: 1.5rem;
 }
 
