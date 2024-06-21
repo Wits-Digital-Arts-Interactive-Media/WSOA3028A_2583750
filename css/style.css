@@ -667,3 +667,29 @@ dl {
     font-size: 1.5rem;
 }
 
+
+.sketches-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.sketches-container figure {
+    margin: 0;
+    text-align: center;
+}
+
+.sketches-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sketches-container figcaption {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: white;
+}

@@ -5,19 +5,20 @@ const menuItems = [
     {name: "Blog", href: `${root}/Blogs/index.html`, dropdown: true},
     {name: "Essays", href: `${root}/Essays/index.html`},
     {name: "Portfolio", href: `${root}/Portfolio/index.html`},
-    {name: "Design", href: `${root}/Design/index.html`},
+    {name: "Design", href: `${root}/Design/index.html`, dropdown: true}, // Add dropdown property here
     {name: "Profile", href: `${root}/Profile/index.html`},
 ];
-export function initialise(currentPage) {                    //creates nav menu based on array. Param = currentPage
+
+export function initialise(currentPage) { //creates nav menu based on array. Param = currentPage
     console.log("worked")
-    const nav = document.querySelector("header > nav")      //selects nav element in header
+    const nav = document.querySelector("header > nav") //selects nav element in header
     const ul = document.createElement("ul")
-    for (let menuItem of menuItems) {                          //iterates over each menu item in menuItems array
-        const li = document.createElement("li")              //Within each iteration a list element is made for each item
-        if (currentPage != menuItem.name) {                     //Condition to check if currentPage name does not match menu item name
-            const a = document.createElement("a")            // if its true, an anchor element is made for each menu item
-            a.innerText = menuItem.name                     // sets the text content of anchor to the menu item name
-            a.setAttribute("href", menuItem.href)           // sets href attribute to the corresponding url
+    for (let menuItem of menuItems) { //iterates over each menu item in menuItems array
+        const li = document.createElement("li") //Within each iteration a list element is made for each item
+        if (currentPage != menuItem.name) { //Condition to check if currentPage name does not match menu item name
+            const a = document.createElement("a") // if its true, an anchor element is made for each menu item
+            a.innerText = menuItem.name // sets the text content of anchor to the menu item name
+            a.setAttribute("href", menuItem.href) // sets href attribute to the corresponding url
             li.appendChild(a)
 
             // Check for dropdown
@@ -25,13 +26,24 @@ export function initialise(currentPage) {                    //creates nav menu 
                 const dropdownUl = document.createElement("ul");
                 dropdownUl.className = "dropdown";
 
-                for (let blog of blogPosts) {
-                    const dropdownLi = document.createElement("li");
-                    const blogLink = document.createElement("a");
-                    blogLink.innerText = blog.name;
-                    blogLink.setAttribute("href", blog.href);
-                    dropdownLi.appendChild(blogLink);
-                    dropdownUl.appendChild(dropdownLi);
+                if (menuItem.name === "Blog") {
+                    for (let blog of blogPosts) {
+                        const dropdownLi = document.createElement("li");
+                        const blogLink = document.createElement("a");
+                        blogLink.innerText = blog.name;
+                        blogLink.setAttribute("href", blog.href);
+                        dropdownLi.appendChild(blogLink);
+                        dropdownUl.appendChild(dropdownLi);
+                    }
+                } else if (menuItem.name === "Design") {
+                    for (let design of designItems) {
+                        const dropdownLi = document.createElement("li");
+                        const designLink = document.createElement("a");
+                        designLink.innerText = design.name;
+                        designLink.setAttribute("href", design.href);
+                        dropdownLi.appendChild(designLink);
+                        dropdownUl.appendChild(dropdownLi);
+                    }
                 }
 
                 li.appendChild(dropdownUl);
@@ -40,6 +52,34 @@ export function initialise(currentPage) {                    //creates nav menu 
         } else {
             li.innerText = menuItem.name
             li.classList.add("current-page");
+
+            // Ensure dropdown still works on current page
+            if (menuItem.dropdown) {
+                const dropdownUl = document.createElement("ul");
+                dropdownUl.className = "dropdown";
+
+                if (menuItem.name === "Blog") {
+                    for (let blog of blogPosts) {
+                        const dropdownLi = document.createElement("li");
+                        const blogLink = document.createElement("a");
+                        blogLink.innerText = blog.name;
+                        blogLink.setAttribute("href", blog.href);
+                        dropdownLi.appendChild(blogLink);
+                        dropdownUl.appendChild(dropdownLi);
+                    }
+                } else if (menuItem.name === "Design") {
+                    for (let design of designItems) {
+                        const dropdownLi = document.createElement("li");
+                        const designLink = document.createElement("a");
+                        designLink.innerText = design.name;
+                        designLink.setAttribute("href", design.href);
+                        dropdownLi.appendChild(designLink);
+                        dropdownUl.appendChild(dropdownLi);
+                    }
+                }
+
+                li.appendChild(dropdownUl);
+            }
         }
         ul.appendChild(li)
     }
@@ -58,6 +98,12 @@ const blogPosts = [
     {name: "Blog 9", href: `${root}/Blogs/blog9.html`, thumbnail: `${root}/Images/funnycat9.png`},
     {name: "Blog 10", href: `${root}/Blogs/blog10.html`, thumbnail: `${root}/Images/funnycat10.png`},
     {name: "Blog 11", href: `${root}/Blogs/blog11.html`, thumbnail: `${root}/Images/funnycat11.png`}
+];
+
+const designItems = [
+    {name: "Wireframe", href: `${root}/Design/wireframe.html`},
+    {name: "IxD", href: `${root}/Design/ixd.html`},
+    {name: "Style Guide", href: `${root}/Design/styleguide.html`}
 ];
 
 export function blogIndexes() {
@@ -84,6 +130,3 @@ export function blogIndexes() {
         blogList.appendChild(card);
     }
 }
-
-
-
