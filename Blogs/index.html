@@ -8,59 +8,47 @@
   <meta name="robots" content="index,follow">
   <meta name="keywords" content="Web Development, Game Development, Interactive, Blog, Portfolio, Essay, Design">
   <meta property="og:title" content="Cameron Morgan Portfolio Website">
-    <meta property="og:description" content="Welcome to Cameron Morgan's Portfolio Website, here you can find his portfolio of work, including games, websites, blogs, analysis.">
-    
-    <meta property="og:url" content="https://wits-digital-arts-interactive-media.github.io/WSOA3028A_2583750/">
+  <meta property="og:description" content="Welcome to Cameron Morgan's Portfolio Website, here you can find his portfolio of work, including games, websites, blogs, analysis.">
+  <meta property="og:url" content="https://wits-digital-arts-interactive-media.github.io/WSOA3028A_2583750/">
   <link rel="icon" type="image/png" href="Images/coffee.png">
-    <title>Blog Posts</title>
-
-    <link rel="stylesheet" href="../font/font.css">
-
+  <title>Blog Posts</title>
+  <link rel="stylesheet" href="../font/font.css">
   <link rel="stylesheet" href="../css/style.css">
-
-<script type="module">
-    import { initialise } from "../Scripts/menu.js";
-    initialise("Blogs"); // Call the initialise function with a test argument
-</script>
-
-<script type="application/ld+json">
-  {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Index",
-
-      "author": {
-          "@type": "Person",
-          "name": "Cameron Morgan"
-      },
-      "publisher": {
-          "@type": "University",
-          "name": "University of Witwatersrand"
-      },
-      "description": "Index of Blog Posts"
-  }
-</script>
-
-<script type="module">
-  import { blogIndexes } from "../Scripts/menu.js";
-  blogIndexes();
-</script>
+  <script type="module">
+    import { initialise, blogIndexes } from "../Scripts/menu.js";
+    initialise("Blogs");
+    blogIndexes();
+  </script>
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Index",
+        "author": {
+            "@type": "Person",
+            "name": "Cameron Morgan"
+        },
+        "publisher": {
+            "@type": "University",
+            "name": "University of Witwatersrand"
+        },
+        "description": "Index of Blog Posts"
+    }
+  </script>
+  <script src="../Scripts/catfact.js" type="module"></script>
 </head>
 <header>
   <h1 align="center"><u>Blog Index</u></h1>
-  <nav>
-
-  </nav>
+  <nav></nav>
   <hr>
 </header>
 <body>
-
-  <ul id="blogList">
-
-  </ul>
-
+  <ul id="blogList"></ul>
   <div id="blogContent"></div>
 
+  <p>Have a free cat fact:</p>
+  <button id="get-catfact-btn">Get Cat Fact</button>
+  <div id="catfact-container"></div>
 
   <footer class="footer">
     <div class="container">

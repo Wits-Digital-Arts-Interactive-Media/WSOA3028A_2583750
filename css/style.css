@@ -693,3 +693,40 @@ dl {
     font-size: 1.2rem;
     color: white;
 }
+
+#catfact-container {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  #catfact-container p {
+    margin: 0;
+  }
+  
+  #get-catfact-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    background: hsl(0, 0%, 20%); /* jet-1 (grey) */
+    color: hsl(0, 0%, 100%); /* white */
+    font-size: 2rem; /* fs-7 */
+    font-weight: 500; /* fw-500 */
+    border-radius: 5px; /* radius-5 */
+    box-shadow: 0 12px 30px -10px hsla(0, 0%, 14%, 0.1); /* shadow */
+    text-decoration: none;
+    transition: transform 0.5s ease, background 0.5s ease; /* transition-2 */
+  }
+  
+  #get-catfact-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(180deg, transparent, hsl(0, 0%, 7%)); /* gradient-1 */
+  }
+
+
